@@ -14,7 +14,7 @@ const groupRoutes = require('./routes/groups');
 const User = require('./models/User');
 const Message = require('./models/Message');
 const Group = require('./models/Group');
-const connectDB = require("./config/db");
+const connectDB = require("../../config/db");
  
 
 dotenv.config();
