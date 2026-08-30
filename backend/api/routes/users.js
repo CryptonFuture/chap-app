@@ -1,12 +1,15 @@
 const express = require('express');
 const User = require('../models/User');
 const { protect } = require('../middleware/auth');
+const connectDB = require("../config/db");
+
 
 const router = express.Router();
 
 // Get all users (except current)
 router.get('/', protect, async (req, res) => {
   try {
+    await connectDB()
     const users = await User.find({ _id: { $ne: req.user._id } })
       .select('-password')
       .sort({ isOnline: -1, username: 1 });
