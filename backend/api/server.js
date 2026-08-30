@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
 
 // MongoDB
 
-await connectDB()
+connectDB()
 // Online users: userId -> socketId
 const onlineUsers = new Map();
 
