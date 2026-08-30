@@ -14,6 +14,8 @@ const groupRoutes = require('./routes/groups');
 const User = require('./models/User');
 const Message = require('./models/Message');
 const Group = require('./models/Group');
+const connectDB = require("./config/db");
+ 
 
 dotenv.config();
 
@@ -38,10 +40,8 @@ app.get('/', (req, res) => {
 });
 
 // MongoDB
-mongoose.connect(process.env.MONGODB_URI)
-  .then(() => console.log('✅ MongoDB Connected'))
-  .catch((err) => console.error('❌ MongoDB Connection Error:', err));
 
+await connectDB()
 // Online users: userId -> socketId
 const onlineUsers = new Map();
 
