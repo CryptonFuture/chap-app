@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Real-time Chat Application Backend with Node.js, Express, MongoDB, Socket.io - Groups & File Uploads",
   "main": "/api/server.js",
+  "type": "commonjs",
   "scripts": {
     "start": "node api/server.js",
     "dev": "nodemon api/server.js"
