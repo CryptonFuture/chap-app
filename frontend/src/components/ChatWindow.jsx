@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 
-const API_BASE = 'https://backend-lime-seven-56.vercel.app/api'
+const API_BASE = 'https://backend-nine-psi-25.vercel.app/api'
 
 export default function ChatWindow({
   messages,
