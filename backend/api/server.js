@@ -24,7 +24,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://frontend-five-xi-22.vercel.app",
+    origin: process.env.CLIENT_URL,
     methods: ['GET', 'POST'],
     credentials: true
   },
@@ -33,7 +33,7 @@ const io = new Server(server, {
 
 // Middleware
 app.use(cors({
-  origin: "https://frontend-five-xi-22.vercel.app",
+  origin: process.env.CLIENT_URL,
   credentials: true
 }));
 app.use(express.json());
