@@ -12,7 +12,7 @@ export function SocketProvider({ children }) {
   useEffect(() => {
     if (user) {
       const token = localStorage.getItem('token')
-      const newSocket = io('https://backend-rust-phi-84.vercel.app', {
+      const newSocket = io('https://backend-lime-seven-56.vercel.app', {
         auth: { token }
       })
 
