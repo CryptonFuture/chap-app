@@ -1,15 +1,19 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/server.js",
-      "use": "@vercel/node"
+  "fluid": true,
+  "functions": {
+    "api/server.js": {
+      "maxDuration": 300
     }
-  ],
+  },
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "api/server.js"
+      "src": "/socket.io/(.*)",
+      "dest": "/api/server.js"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/server.js"
     }
   ]
 }
