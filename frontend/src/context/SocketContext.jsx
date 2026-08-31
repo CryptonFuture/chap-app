@@ -12,7 +12,7 @@ export function SocketProvider({ children }) {
   useEffect(() => {
     if (user) {
       const token = localStorage.getItem('token')
-      const newSocket = io('http://localhost:5000', {
+      const newSocket = io('https://backend-rust-phi-84.vercel.app', {
         auth: { token }
       })
 
