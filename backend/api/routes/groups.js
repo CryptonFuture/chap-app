@@ -1,6 +1,6 @@
 const express = require('express');
-const Group = require('../models/Group');
-const Message = require('../models/Message');
+const Group = require('../../../models/Group');
+const Message = require('../../../models/Message');
 const { protect } = require('../middleware/auth');
 const upload = require('../middleware/upload');
 

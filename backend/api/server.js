@@ -11,10 +11,10 @@ const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
 const messageRoutes = require('./routes/messages');
 const groupRoutes = require('./routes/groups');
-const User = require('./models/User');
-const Message = require('./models/Message');
-const Group = require('./models/Group');
-const connectDB = require("./config/db");
+const User = require('../../models/User');
+const Message = require('../../models/Message');
+const Group = require('../../models/Group');
+const connectDB = require("../../config/db");
  
 
 dotenv.config();
