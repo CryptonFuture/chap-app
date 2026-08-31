@@ -1,5 +1,5 @@
 const express = require('express');
-const User = require('../../../models/User');
+const User = require('../models/User');
 const { protect } = require('../middleware/auth');
 const connectDB = require("../../../config/db");
 
