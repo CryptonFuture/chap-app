@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "fluid": true,
   "builds": [
     {
       "src": "api/server.js",
@@ -8,8 +9,16 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "api/server.js"
+      "src": "/socket.io/(.*)",
+      "dest": "/api/server.js"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/server.js"
+    },
+    {
+      "src": "/",
+      "dest": "/api/server.js"
     }
   ]
 }
