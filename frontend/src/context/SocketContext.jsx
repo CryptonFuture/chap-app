@@ -13,7 +13,9 @@ export function SocketProvider({ children }) {
     if (user) {
       const token = localStorage.getItem('token')
       const newSocket = io('https://backend-nine-psi-25.vercel.app', {
-        auth: { token }
+        auth: { token },
+        withCredentials: true,
+        transports: ['polling', 'websocket']
       })
 
       newSocket.on('connect', () => {
