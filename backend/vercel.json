@@ -1,11 +1,7 @@
 {
   "version": 2,
   "fluid": true,
-  "functions": {
-    "api/server.js": {
-      "maxDuration": 300
-    }
-  },
+
   "routes": [
     {
       "src": "/socket.io/(.*)",
