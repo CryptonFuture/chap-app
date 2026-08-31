@@ -2,7 +2,7 @@ const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 
-const uploadDir = "/tmp/uploads";
+const uploadDir = path.join(process.cwd(), 'api', 'uploads');
 
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
