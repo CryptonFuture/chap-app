@@ -22,10 +22,20 @@ dotenv.config();
 const app = express();
 const server = http.createServer(app);
 
-const io = new Server(server);
+const io = new Server(server, {
+  cors: {
+    origin: true,
+    methods: ['GET', 'POST'],
+    credentials: true
+  },
+  maxHttpBufferSize: 1e7 // 10MB for large payloads if needed
+});
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: true,
+  credentials: true
+}));
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
